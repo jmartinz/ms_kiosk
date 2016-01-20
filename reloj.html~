@@ -1,21 +1,19 @@
 <!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-        <title>||__Reloj Digital ITechNode__||</title>
-            <!--Agregamos nuestro archivo externo de estilos -->
+	<head>
+    		<meta charset="UTF-8">
+        	<title>||__Reloj Digital ITechNode__||</title>
+            	<!--Agregamos nuestro archivo externo de estilos -->
                 <link rel="stylesheet" href="css/style.css">
-                    <!--Agregamos archivo JQuery -->
-                        <script type="text/javascript"
-                        src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-                        </script>
-                            <!--Agregamos nuestro archivo con la funcion del
-                            reloj -->
-                                 <script type="text/javascript"
-                                 src="js/funcion.js"></script>
-                                  
-                                  </head>
-                                  <body>
-                                      <div id="clock"></div>
-                                      </body>
-                                      </html>
+                <!--Agregamos archivo JQuery -->
+                <script type="text/javascript"
+                	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+                </script>
+                <!--Agregamos nuestro archivo con la funcion del reloj -->
+                <script type="text/javascript" src="js/funcion.js"></script>
+	</head>
+        <body>
+        	<div id="clock"></div>
+		<a href="http://192.168.1.111:6680/mopify/">Mopidy</a>
+        </body>
+</html>
