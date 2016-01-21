@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+	<head>
+    		<meta charset="UTF-8">
+        	<title>Quiosco MS</title>
+            	<!--Agregamos nuestro archivo externo de estilos-->
+                <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"><!--"css/style.css"-->
+		
+                <!--Agregamos archivo JQuery -->
+                <script type="text/javascript"
+                	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+                </script>
+                <!--Agregamos nuestro archivo con la funcion del reloj -->
+                <script type="text/javascript" src="{{ url_for('static', filename='js/funcion.js') }}">
+		</script>
+	</head>
+        <body>
+        	<div id="clock"></div>
+		<a href="http://192.168.1.111:6680/mopify/">Mopidy</a>
+		<table align="center" class="style1">
+		    <tr>
+		        <td colspan="2" style="text-align: center">
+						<img src="http://picam:8080/?action=stream"/>
+		        </td>
+		    </tr>
+		    <tr>
+		        <td colspan="2" style="text-align: center">
+		            <input id="btnUp" type="button" value="Up" onclick="Button_onclick('up')" />
+		        </td>
+		    </tr>
+		    <tr>
+		        <td style="text-align: center">
+		            <input id="btnLeft" type="button" value="Left" onclick="Button_onclick('left')" />
+		        </td>
+		        <td style="text-align: center">
+		            <input id="btnRight" type="button" value="Right" onclick="Button_onclick('right')" />
+		        </td>
+		    </tr>
+		    <tr>
+		        <td colspan="2" style="text-align: center">
+		            <input id="btnDown" type="button" value="Down" onclick="Button_onclick('down')" />
+		        </td>
+		    </tr>
+		</table>
+        </body>
+</html>
