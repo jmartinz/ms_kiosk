@@ -40,6 +40,39 @@ def move(direction):
 		print(os.path.join(dirname, filename))
 		return 'down'
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5080, debug=False)
+# The function below is executed when someone requests a the pictures URL
+@app.route("/pictures")
+def pictures():
+    files = "<html><body><table>"
+    # for dirname, dirnames, filenames in os.walk('./static/Pictures'):
+	#     # print path to all subdirectories first.
+	#     #for subdirname in dirnames:
+	# 	#print(os.path.join(dirname, subdirname))
+    #
+	#     # print path to all filenames.
+	#     for filename in filenames:
+	# 	print(os.path.join(dirname, filename))
+	# 	item = os.path.join(dirname, filename) +"\n"
+	# 	files += item
 
+    for file in os.listdir("./static/Pictures"):
+        if file.endswith(".png"):
+            print(file)
+            item = "<tr><td>"+file +"</td></tr>"
+            files += item
+    files += "</table></body></html>"
+    return files
+
+# Load the emplate on webrequest for the photos page
+@app.route("/photos")
+def photos():
+
+    # Create a template data dictionary to send any data to the template
+    templateData = {
+        'title' : 'photos'
+        }
+    # Pass the template data into the template picam.html and return it to the user
+    return render_template('photos.html', **templateData)    
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5080, debug=True)

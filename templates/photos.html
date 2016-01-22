@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+	<head>
+    		<meta charset="UTF-8">
+        	<title>Fotos MS</title>
+            	<!--Agregamos nuestro archivo externo de estilos-->
+                <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"><!--"css/style.css"-->
+								<link rel="stylesheet" href="{{ url_for('static', filename='css/slide-show.css') }}"><!--"css/style.css"-->
+
+                <!--Agregamos archivo JQuery -->
+                <script type="text/javascript"
+                	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+                </script>
+                <!--Agregamos nuestro archivo con la funcion del reloj -->
+
+								<script type="text/javascript" src="{{ url_for('static', filename='js/slide-show.js') }}"></script>
+		</script>
+	</head>
+        <body>
+					<ul id="galeria">
+						<li class="selected"><img src="{{ url_for('static', filename='Pictures/ErrorRecetaW.png') }}" alt="foto" /></li>
+						<li class="noselected"><img src="{{ url_for('static', filename='Pictures/pp.png') }}" alt="foto" /></li>
+						<li class="noselected"><img src="{{ url_for('static', filename='Pictures/NoOracle.png') }}" alt="foto" /></li>
+					</ul>
+        </body>
+</html>
